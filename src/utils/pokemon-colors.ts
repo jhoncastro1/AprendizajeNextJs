@@ -1,0 +1,21 @@
+// utils/pokemon-colors.ts
+export const typeColors: Record<string, { from: string; to: string; border: string; text: string }> = {
+  normal:   { from: "from-gray-200", to: "to-gray-400", border: "border-gray-500", text: "text-gray-700" },
+  fire:     { from: "from-orange-300", to: "to-red-500", border: "border-red-600", text: "text-red-800" },
+  water:    { from: "from-blue-300", to: "to-blue-600", border: "border-blue-700", text: "text-blue-800" },
+  grass:    { from: "from-green-300", to: "to-green-500", border: "border-green-600", text: "text-green-800" },
+  electric: { from: "from-yellow-200", to: "to-yellow-500", border: "border-yellow-600", text: "text-yellow-800" },
+  ice:      { from: "from-cyan-200", to: "to-cyan-400", border: "border-cyan-600", text: "text-cyan-800" },
+  fighting: { from: "from-red-400", to: "to-orange-700", border: "border-red-800", text: "text-red-900" },
+  poison:   { from: "from-purple-300", to: "to-purple-600", border: "border-purple-700", text: "text-purple-800" },
+  ground:   { from: "from-yellow-400", to: "to-yellow-700", border: "border-yellow-800", text: "text-yellow-900" },
+  flying:   { from: "from-indigo-200", to: "to-indigo-400", border: "border-indigo-600", text: "text-indigo-800" },
+  psychic:  { from: "from-pink-300", to: "to-pink-600", border: "border-pink-700", text: "text-pink-800" },
+  bug:      { from: "from-lime-300", to: "to-lime-500", border: "border-lime-600", text: "text-lime-800" },
+  rock:     { from: "from-yellow-600", to: "to-yellow-800", border: "border-yellow-900", text: "text-yellow-950" },
+  ghost:    { from: "from-purple-400", to: "to-indigo-700", border: "border-indigo-800", text: "text-indigo-200" },
+  dragon:   { from: "from-indigo-500", to: "to-purple-700", border: "border-purple-800", text: "text-purple-200" },
+  dark:     { from: "from-gray-700", to: "to-black", border: "border-gray-900", text: "text-gray-100" },
+  steel:    { from: "from-gray-300", to: "to-gray-500", border: "border-gray-600", text: "text-gray-800" },
+  fairy:    { from: "from-pink-200", to: "to-pink-400", border: "border-pink-600", text: "text-pink-700" },
+};

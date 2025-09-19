@@ -1,0 +1,67 @@
+import {
+  Zap,
+  Flame,
+  Droplet,
+  Leaf,
+  Mountain,
+  Skull,
+  Star,
+  Heart,
+  Moon,
+  Snowflake,
+  Feather,
+  Swords,
+  Shield,
+  Bug,
+  Ghost,
+  Gem,
+  Sun,
+  CloudLightning,
+} from "lucide-react";
+
+// 🎨 Colores por tipo (usando clases Tailwind)
+export const typeColors: Record<
+  string,
+  { from: string; to: string; border: string; text: string }
+> = {
+  normal: { from: "from-gray-200", to: "to-gray-400", border: "border-gray-500", text: "text-gray-700" },
+  fire: { from: "from-orange-400", to: "to-red-500", border: "border-red-600", text: "text-red-700" },
+  water: { from: "from-blue-400", to: "to-blue-600", border: "border-blue-700", text: "text-blue-700" },
+  grass: { from: "from-green-400", to: "to-green-600", border: "border-green-700", text: "text-green-700" },
+  electric: { from: "from-yellow-300", to: "to-yellow-500", border: "border-yellow-600", text: "text-yellow-700" },
+  ice: { from: "from-cyan-200", to: "to-cyan-400", border: "border-cyan-600", text: "text-cyan-700" },
+  fighting: { from: "from-red-500", to: "to-red-700", border: "border-red-800", text: "text-red-800" },
+  poison: { from: "from-purple-400", to: "to-purple-600", border: "border-purple-700", text: "text-purple-700" },
+  ground: { from: "from-yellow-600", to: "to-yellow-800", border: "border-yellow-900", text: "text-yellow-900" },
+  flying: { from: "from-sky-300", to: "to-sky-500", border: "border-sky-600", text: "text-sky-700" },
+  psychic: { from: "from-pink-400", to: "to-pink-600", border: "border-pink-700", text: "text-pink-700" },
+  bug: { from: "from-lime-400", to: "to-lime-600", border: "border-lime-700", text: "text-lime-700" },
+  rock: { from: "from-yellow-700", to: "to-yellow-900", border: "border-yellow-950", text: "text-yellow-900" },
+  ghost: { from: "from-indigo-400", to: "to-indigo-700", border: "border-indigo-800", text: "text-indigo-700" },
+  dragon: { from: "from-purple-500", to: "to-indigo-700", border: "border-indigo-800", text: "text-indigo-800" },
+  dark: { from: "from-gray-700", to: "to-black", border: "border-black", text: "text-gray-200" },
+  steel: { from: "from-gray-400", to: "to-gray-600", border: "border-gray-700", text: "text-gray-800" },
+  fairy: { from: "from-pink-300", to: "to-pink-500", border: "border-pink-600", text: "text-pink-700" },
+};
+
+// 🌀 Íconos por tipo (lucide-react)
+export const typeIcons: Record<string, React.ElementType> = {
+  normal: Star,
+  fire: Flame,
+  water: Droplet,
+  grass: Leaf,
+  electric: Zap,
+  ice: Snowflake,
+  fighting: Swords,
+  poison: Skull,
+  ground: Mountain,
+  flying: Feather,
+  psychic: Heart,
+  bug: Bug,
+  rock: Gem,
+  ghost: Ghost,
+  dragon: Sun,
+  dark: Moon,
+  steel: Shield,
+  fairy: CloudLightning,
+};

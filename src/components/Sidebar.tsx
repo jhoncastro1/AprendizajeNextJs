@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import { IoBrowsersOutline, IoCalculator, IoLogoReact } from 'react-icons/io5'
+import { IoBrowsersOutline, IoCalculator, IoFootball, IoLogoReact } from 'react-icons/io5'
 import SidebarMenuItem from './SidebarMenuItem';
 
 const menuItems = [
@@ -18,13 +18,21 @@ const menuItems = [
     title: 'Counter',
     subtitle: 'Contador Client Side'
   },
+
+  {
+    path: '/dashboard/pokemons',
+    icon: <IoFootball size={40} />,
+    title: 'Pokemons',
+    subtitle: 'Pokedex'
+  },
+
 ]
 
 const Sidebar = () => {
   return (
     <div id="menu"
       style={{ width: '400px' }}
-      className="bg-gray-900 min-h-screen z-10 text-slate-300 w-64 left-0 h-screen overflow-y-scroll">
+      className="bg-gray-900 min-h-screen z-10 text-slate-300 w-64 left-0 overflow-y-scroll">
 
 
       <div id="logo" className="my-4 px-6">
@@ -42,7 +50,7 @@ const Sidebar = () => {
             <Image className="rounded-full w-8 h-8" src="https://images.unsplash.com/photo-1542909168-82c3e7fdca5c" alt="User avatar" width={50} height={50} />
           </span>
           <span className="text-sm md:text-base font-bold">
-            Edward Tompson
+            Jhon Castro
           </span>
         </a>
       </div>
