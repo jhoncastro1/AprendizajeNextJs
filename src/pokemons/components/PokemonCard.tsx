@@ -1,8 +1,12 @@
+'use client'
+
 import React from "react";
 import { SimplePokemon } from "../interfaces/simple-pokemon";
 import Image from "next/image";
 import Link from "next/link";
-import { IoHeartOutline } from "react-icons/io5";
+import { IoHeart, IoHeartOutline } from "react-icons/io5";
+import { useAppDispatch, useAppSelector } from "@/store";
+import { toggleFavorite } from "@/store/pokemons/pokemons";
 
 interface Props {
   pokemon: SimplePokemon;
@@ -11,8 +15,17 @@ interface Props {
 
 const PokemonCard = ({ pokemon }: Props) => {
 
-
+  
+  
   const { id, name } = pokemon;
+
+  const isFavorite = useAppSelector( state => !!state.pokemons.favorites[id] );
+  const dispatch = useAppDispatch();
+
+  const onToggle = () => {
+    dispatch( toggleFavorite(pokemon) );
+  }
+  
 
   return (
     <div className="flex justify-center items-center">
@@ -36,9 +49,16 @@ const PokemonCard = ({ pokemon }: Props) => {
 
 
         <div className="flex justify-between items-center mb-3">
-          <div className="flex items-center gap-1 text-red-600">
-            <IoHeartOutline size={20} />
-            <span className="text-sm">No favorito</span>
+          <div className="flex items-center gap-1 text-red-600 cursor-pointer" onClick={onToggle}>
+
+            {
+              isFavorite
+              ?  <IoHeart/>  : <IoHeartOutline/>
+            }
+
+            {
+              isFavorite ? 'Es favorito' : 'No es favorito' 
+            }
           </div>
           <span className="text-xs font-semibold bg-yellow-300 px-2 py-1 rounded-full">
             Básico
